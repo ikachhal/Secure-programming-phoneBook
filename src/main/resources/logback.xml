@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <property name="HOME_LOG" value="logs/app.log"/>
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d - %msg%n</pattern>
@@ -7,7 +8,7 @@
     </appender>
 
     <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>app.log</file>
+        <file>logs/app.log</file>
         <encoder>
             <pattern>%d - %msg%n</pattern>
         </encoder>

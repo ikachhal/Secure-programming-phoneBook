@@ -1,0 +1,9 @@
+CREATE TABLE phonebook (
+phone_number VARCHAR(225) PRIMARY KEY,
+name VARCHAR(225) NOT NULL
+);
+
+INSERT INTO phonebook (phone_number, name)
+   VALUES ('1234567890', 'John Doe'),
+   ('9876543210', 'Jane Smith'),
+   ('5551112222', 'Alice Johnson');

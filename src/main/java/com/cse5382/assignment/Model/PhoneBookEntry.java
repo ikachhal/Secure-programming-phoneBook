@@ -1,8 +1,11 @@
 package com.cse5382.assignment.Model;
 
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Entity
 @Table(name="phonebook")
 public class PhoneBookEntry   {
@@ -14,11 +17,15 @@ public class PhoneBookEntry   {
   @Id
   private String phoneNumber = null;
 
+  public PhoneBookEntry(String name, String phoneNumber) {
+    this.name = name;
+    this.phoneNumber = phoneNumber;
+  }
+
   public PhoneBookEntry name(String name) {
     this.name = name;
     return this;
   }
-
 
     public String getName() {
     return name;

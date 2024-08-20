@@ -1,14 +1,16 @@
 package com.cse5382.assignment.Service;
 
 import com.cse5382.assignment.Model.PhoneBookEntry;
+import com.cse5382.assignment.Model.PhoneBookResponse;
 
 import java.util.List;
 
 public interface PhoneBookService {
-    public List<PhoneBookEntry> list();
-    public void add(PhoneBookEntry phoneBookEntry);
+    public PhoneBookResponse list();
 
-    public void deleteByName(String name);
+    public PhoneBookResponse add(PhoneBookEntry phoneBookEntry);
 
-    public void deleteByNumber(String phoneNumber);
+    public PhoneBookResponse deleteByName(String name);
+
+    public PhoneBookResponse deleteByNumber(String phoneNumber);
 }
